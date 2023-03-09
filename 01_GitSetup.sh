@@ -32,6 +32,9 @@ else
   exit 1
 fi
 
+# Set up the git lg alias for the GitHub CLI to display a pretty log
+git config --global alias.lg "log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
+
 # Verify that the GitHub CLI has been installed
 gh --version
 
